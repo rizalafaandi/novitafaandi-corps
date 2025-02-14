@@ -7,10 +7,11 @@ import DateFormatter from "./date-formatter";
 type Props = {
   title: string;
   coverImage: string;
-  date: string;
+  date?: string;
   excerpt: string;
   author: Author;
   slug: string;
+  subtitle?: string;
 };
 
 export function HeroPost({
@@ -20,6 +21,7 @@ export function HeroPost({
   excerpt,
   author,
   slug,
+  subtitle,
 }: Props) {
   return (
     <section>
@@ -34,7 +36,7 @@ export function HeroPost({
             </Link>
           </h3>
           <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
+            {subtitle ? subtitle : <DateFormatter dateString={date} />}
           </div>
         </div>
         <div>

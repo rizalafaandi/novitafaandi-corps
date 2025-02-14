@@ -16,12 +16,14 @@ export default function Index() {
       <Container>
         <Intro />
         <HeroPost
-          title={heroPost.title}
+          title={"Novita Afaandi"}
           coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
+          subtitle="Est. 2022"
+          author={{ picture: heroPost.author.picture, name: "Linda Novita" }}
+          slug={"heroPost.slug"}
+          excerpt={
+            "Kami tidak hanya memberikan riasan yang memukau, tetapi juga pengalaman layanan yang ramah, nyaman, dan memuaskan."
+          }
         />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>

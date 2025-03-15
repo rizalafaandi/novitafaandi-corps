@@ -1,8 +1,8 @@
-import Avatar from "@/app/_components/avatar";
-import CoverImage from "@/app/_components/cover-image";
+"use client";
 import { type Author } from "@/interfaces/author";
-import Link from "next/link";
 import DateFormatter from "./date-formatter";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 type Props = {
   title: string;
@@ -14,34 +14,37 @@ type Props = {
   subtitle?: string;
 };
 
-export function HeroPost({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-  subtitle,
-}: Props) {
+export function HeroPost({ title, date, excerpt, subtitle }: Props) {
+  const [logos, setLogos] = useState("/assets/icons/logo/ic_logo_light.jpeg");
+  useEffect(() => {
+    const dark = matchMedia(`(prefers-color-scheme: dark)`).matches;
+    if (dark) {
+      setLogos("/assets/icons/logo/ic_logo_dark.jpeg");
+    } else {
+      setLogos("/assets/icons/logo/ic_logo_light.jpeg");
+    }
+  }, []);
   return (
     <section>
-      <div className="mb-8 md:mb-16">
-        <CoverImage title={title} src={coverImage} slug={slug} />
-      </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
-        <div>
-          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
-            <Link href={`/posts/${slug}`} className="hover:underline">
-              {title}
-            </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            {subtitle ? subtitle : <DateFormatter dateString={date} />}
-          </div>
+      <div className="text-center mb-20">
+        <h1 className="text-7xl pb-4 text-center font-extrabold animate-text">
+          Kebaya Impian, Pesona Sejati
+        </h1>
+        <div className="mb-4 md:mb-0 text-lg font-semibold">
+          {subtitle ? subtitle : <DateFormatter dateString={date} />}
         </div>
-        <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          <Avatar name={author.name} picture={author.picture} />
+      </div>
+      <div className="flex mb-20 md:mb-28 gap-10 items-center">
+        <Image
+          src={"/assets/icons/logo/hero_icon.jpeg"}
+          alt={`Cover Image for`}
+          className="mr-2 w-10 h-10 md:w-1/4 md:h-auto rounded-lg"
+          width={1300}
+          height={100}
+        />
+        <div className="w-2/3">
+          <h4 className="hover:underline text-3xl font-bold pb-10">{title}</h4>
+          <p className="text-lg leading-relaxed mb-10">{excerpt}</p>
         </div>
       </div>
     </section>

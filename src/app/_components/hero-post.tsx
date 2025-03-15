@@ -34,8 +34,8 @@ export function HeroPost({ title, date, excerpt, subtitle }: Props) {
           height={100}
         />
         <div className="w-2/3">
-          <h4 className="hover:underline text-3xl font-bold pb-10">{title}</h4>
-          <p className="text-lg leading-relaxed mb-10">{excerpt}</p>
+          <h4 className="hover:underline text-2xl font-bold pb-10">{title}</h4>
+          <p className="text-base leading-relaxed mb-10">{excerpt}</p>
         </div>
       </div>
     </section>

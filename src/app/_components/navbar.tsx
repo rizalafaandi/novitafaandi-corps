@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
           <Image
-            src={"/assets/icons/logo/ic_logo_dark.jpeg"}
+            src={"/assets/icons/logo/ic_logo_light.jpeg"}
             alt={`Cover Image for`}
             // className={cn("shadow-sm w-full", {
             //   "hover:shadow-lg transition-shadow duration-200": slug,

@@ -5,12 +5,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type Props = {
-  title: string;
+  title?: string;
   coverImage: string;
   date?: string;
-  excerpt: string;
-  author: Author;
-  slug: string;
+  excerpt?: string;
+  author?: Author;
+  slug?: string;
   subtitle?: string;
 };
 

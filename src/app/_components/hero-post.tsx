@@ -15,30 +15,21 @@ type Props = {
 };
 
 export function HeroPost({ title, date, excerpt, subtitle }: Props) {
-  const [logos, setLogos] = useState("/assets/icons/logo/ic_logo_light.jpeg");
-  useEffect(() => {
-    const dark = matchMedia(`(prefers-color-scheme: dark)`).matches;
-    if (dark) {
-      setLogos("/assets/icons/logo/ic_logo_dark.jpeg");
-    } else {
-      setLogos("/assets/icons/logo/ic_logo_light.jpeg");
-    }
-  }, []);
   return (
     <section>
       <div className="text-center mb-20">
-        <h1 className="text-7xl pb-4 text-center font-extrabold animate-text">
+        <h1 className="text-3xl pb-4 text-center font-extrabold">
           Kebaya Impian, Pesona Sejati
         </h1>
-        <div className="mb-4 md:mb-0 text-lg font-semibold">
+        <div className="mb-4 md:mb-0 text-sm font-light">
           {subtitle ? subtitle : <DateFormatter dateString={date} />}
         </div>
       </div>
-      <div className="flex mb-20 md:mb-28 gap-10 items-center">
+      <div className="flex flex-col mb-20 md:mb-28 gap-10 items-center text-center">
         <Image
           src={"/assets/icons/logo/hero_icon.jpeg"}
-          alt={`Cover Image for`}
-          className="mr-2 w-10 h-10 md:w-1/4 md:h-auto rounded-lg"
+          alt={`Cover Image for hero icon`}
+          className="mr-2 w-10 h-10 md:w-1/5 md:h-auto rounded-lg"
           width={1300}
           height={100}
         />

@@ -2,27 +2,17 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ThemeSwitcher } from "./theme-switcher";
 import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [logos, setLogos] = useState("/assets/icons/logo/ic_logo_light.jpeg");
-  useEffect(() => {
-    const dark = matchMedia(`(prefers-color-scheme: dark)`).matches;
-    if (dark) {
-      setLogos("/assets/icons/logo/ic_logo_dark.jpeg");
-    } else {
-      setLogos("/assets/icons/logo/ic_logo_light.jpeg");
-    }
-  }, []);
 
   return (
     <nav className="p-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
           <Image
-            src={logos}
+            src={"/assets/icons/logo/ic_logo_dark.jpeg"}
             alt={`Cover Image for`}
             // className={cn("shadow-sm w-full", {
             //   "hover:shadow-lg transition-shadow duration-200": slug,
@@ -34,7 +24,6 @@ export default function Navbar() {
         </Link>
         <div className="md:hidden z-50 relative">
           <div className="flex flex-row items-center gap-x-4">
-            <ThemeSwitcher />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="focus:outline-none flex flex-col items-center"

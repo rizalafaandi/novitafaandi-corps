@@ -16,39 +16,6 @@ export default function Index() {
     <main>
       <Container>
         <Navbar />
-        {/* <Intro /> */}
-        {/* <div className="relative w-full h-80 items-center flex justify-center gap-x-10 mb-10">
-          <Image
-            src={"/assets/images/hero_image.jpeg"}
-            alt={`Cover Image for`}
-            // className={cn("shadow-sm w-full", {
-            //   "hover:shadow-lg transition-shadow duration-200": slug,
-            // })}
-            className="mr-2 w-10 h-10 md:w-60 md:h-full"
-            width={1300}
-            height={100}
-          />
-          <Image
-            src={"/assets/icons/logo/hero_icon.jpeg"}
-            alt={`Cover Image for`}
-            // className={cn("shadow-sm w-full", {
-            //   "hover:shadow-lg transition-shadow duration-200": slug,
-            // })}
-            className="mr-2 w-10 h-10 md:w-auto md:h-full"
-            width={1300}
-            height={100}
-          />
-          <Image
-            src={"/assets/images/hero_image2.jpeg"}
-            alt={`Cover Image for`}
-            // className={cn("shadow-sm w-full", {
-            //   "hover:shadow-lg transition-shadow duration-200": slug,
-            // })}
-            className="mr-2 w-10 h-10 md:w-60 md:h-full"
-            width={1300}
-            height={100}
-          />
-        </div> */}
         <HeroPost
           title={
             '"Anggun, Elegan, Berkelas – Kebaya Impian untuk Setiap Momen Spesial! ✨"'

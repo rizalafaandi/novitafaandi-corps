@@ -79,7 +79,7 @@ export default function Navbar() {
         {/* <Link href="/about" className="block  p-4">
           About
         </Link> */}
-        <Link href="/services" className="block  p-4">
+        <Link href="/katalog" className="block  p-4">
           Katalog
         </Link>
         <Link href="/contact" className="block  p-4">

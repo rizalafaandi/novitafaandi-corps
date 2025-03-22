@@ -16,7 +16,7 @@ type Props = {
 
 export function HeroPost({ title, date, excerpt, subtitle }: Props) {
   return (
-    <section>
+    <section className="my-10 border-b border-slate-100">
       <div className="text-center">
         <h1 className="text-3xl pb-4 text-center font-extrabold">
           Kebaya Impian, Pesona Sejati

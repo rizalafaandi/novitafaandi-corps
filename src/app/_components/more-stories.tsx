@@ -14,7 +14,9 @@ export function MoreStories({ posts }: Props) {
         <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
           Katalog
         </h2>
-        <div>Lebih banyak</div>
+        <div className="font-bold hover:cursor-pointer hover:text-slate-400">
+          Lebih banyak
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
         {posts.map((post) => (

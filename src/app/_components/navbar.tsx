@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="p-4">
+    <nav className="p-4 border-b border-slate-100">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
           <Image
@@ -49,15 +49,22 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex space-x-4 justify-center items-center">
           {/* <Link href="/about" className="">
             About
           </Link> */}
-          <Link href="/services" className="">
-            Services
+          <Link
+            href="/katalog"
+            className="font-bold hover:cursor-pointer hover:text-slate-400"
+          >
+            Katalog
           </Link>
-          <Link href="/contact" className="">
-            Contact
+          <div className="w-[2px] h-6 bg-black rounded-full" />
+          <Link
+            href="/contact"
+            className="font-bold hover:cursor-pointer hover:text-slate-400"
+          >
+            Kontak
           </Link>
         </div>
       </div>
@@ -73,10 +80,10 @@ export default function Navbar() {
           About
         </Link> */}
         <Link href="/services" className="block  p-4">
-          Services
+          Katalog
         </Link>
         <Link href="/contact" className="block  p-4">
-          Contact
+          Kontak
         </Link>
       </motion.div>
     </nav>

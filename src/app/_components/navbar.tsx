@@ -61,7 +61,8 @@ export default function Navbar() {
           </Link>
           <div className="w-[2px] h-6 bg-black rounded-full" />
           <Link
-            href="/contact"
+            href="https://wa.me/6288808655767"
+            target="_blank"
             className="font-bold hover:cursor-pointer hover:text-slate-400"
           >
             Kontak
@@ -82,7 +83,11 @@ export default function Navbar() {
         <Link href="/katalog" className="block  p-4">
           Katalog
         </Link>
-        <Link href="/contact" className="block  p-4">
+        <Link
+          href="https://wa.me/6288808655767"
+          target="_blank"
+          className="block  p-4"
+        >
           Kontak
         </Link>
       </motion.div>

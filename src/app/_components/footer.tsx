@@ -21,7 +21,8 @@ export function Footer() {
               Katalog
             </Link>
             <Link
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
+              href="https://wa.me/6288808655767"
+              target="_blank"
               className="mx-3 font-bold hover:underline"
             >
               Kontak

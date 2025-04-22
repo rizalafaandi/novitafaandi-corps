@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="p-4 border-b border-slate-100">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center ">
         <Link href="/" className="text-xl font-bold">
           <Image
             src={"/assets/icons/logo/ic_logo_light.jpeg"}
@@ -17,7 +17,7 @@ export default function Navbar() {
             // className={cn("shadow-sm w-full", {
             //   "hover:shadow-lg transition-shadow duration-200": slug,
             // })}
-            className="mr-2 w-10 h-10 md:w-32 md:h-32"
+            className="mr-2 w-20 h-2w-20 md:w-32 md:h-32"
             width={200}
             height={200}
           />
@@ -73,20 +73,18 @@ export default function Navbar() {
         initial={{ height: 0, opacity: 0 }}
         animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
         transition={{ duration: 0.3 }}
-        className={`${
-          isOpen ? "mt-4" : ""
-        } md:hidden overflow-hidden bg-gray-800`}
+        className={`${isOpen ? "mt-4" : ""} md:hidden overflow-hidden bg-white`}
       >
         {/* <Link href="/about" className="block  p-4">
           About
         </Link> */}
-        <Link href="/katalog" className="block  p-4">
+        <Link href="/katalog" className="block  p-4 text-center">
           Katalog
         </Link>
         <Link
           href="https://wa.me/6288808655767"
           target="_blank"
-          className="block  p-4"
+          className="block  p-4 bg-white text-center"
         >
           Kontak
         </Link>

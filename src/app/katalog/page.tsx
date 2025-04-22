@@ -3,11 +3,13 @@ import Breadcrumb from "@/app/_components/breadcrumb";
 import Image from "next/image";
 import { products } from "../../../public/static/doc/items";
 import { RiDiscountPercentFill } from "react-icons/ri";
+import Navbar from "../_components/navbar";
 
 export default function Katalog() {
   return (
     <main>
       <Container>
+        <Navbar />
         <Breadcrumb />
         <div className="p-4">
           <h2 className="text-2xl font-bold mb-4">Katalog Produk</h2>

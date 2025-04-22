@@ -29,7 +29,7 @@ export function HeroPost({ title, date, excerpt, subtitle }: Props) {
         <Image
           src={"/assets/icons/logo/hero_icon.jpeg"}
           alt={`Cover Image for hero icon`}
-          className="mr-2 w-10 h-10 md:w-1/6 md:h-auto rounded-lg my-10 border border-white shadow-md"
+          className="mr-2 w-1/2 h-1/2 md:w-1/6 md:h-auto rounded-lg my-10 border border-white shadow-md"
           width={1300}
           height={100}
         />
